@@ -6,7 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const Header = () => {
     return (
         <Box>
-            <AppBar>
+            <AppBar position='static'>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         E-Commerce App
