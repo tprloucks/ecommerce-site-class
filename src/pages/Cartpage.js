@@ -1,11 +1,14 @@
-import { Box } from "@mui/system"
-import React from "react"
+import React from 'react'
+import { Box } from '@mui/system'
+import Layout from "../components/Layout"
 
 const Cartpage = () => {
     return (
-        <Box>
-            cart page content
-        </Box>
+        <Layout>
+            <Box>
+                cart content
+            </Box>
+        </Layout>
     )
 }
 
