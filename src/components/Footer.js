@@ -1,10 +1,15 @@
+import { AppBar, Toolbar, Typography } from '@mui/material'
+import { Box } from '@mui/system'
 import React from 'react'
 
 function Footer() {
     return (
-        <div>
-            Footer
-        </div>
+        <Box>
+            <AppBar position='static'>
+                <Toolbar>
+                </Toolbar>
+            </AppBar>
+        </Box>
     )
 }
 
