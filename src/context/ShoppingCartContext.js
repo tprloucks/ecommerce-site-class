@@ -3,9 +3,13 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 export const shoppingCartContext = createContext();
 export const useShoppingCart = () => useContext(shoppingCartContext);
 
+// Actions: simple javascript objects that tell us how the state should change. all actions must include a type propery.
 const ADD_TO_CART_ACTION = "ADD_TO_CART";
 const REMOVE_FROM_CART_ACTION = "REMOVE_FROM_CART";
 const EMPTY_CART_ACTION = "EMPTY_CART";
+
+// ACTION CREATORS
+// Helper functions to easily create actions.
 
 const sortCartItems = (shoppingCartArray) => {
     const sorted = shoppingCartArray.sort(function (x, y) {
@@ -58,6 +62,9 @@ const removeToCartActionCreator = (itemId) => {
     })
 }
 
+// Hey I am the state reducer I get called everythime an action is dispatched.
+// The arguments react calls me with are the currentstate and the action that was just dispatched.
+// Whatever I return is the new state
 const reducer = (oldState, action) => {
     if (action.type === EMPTY_CART_ACTION) {
         return [];
@@ -120,7 +127,7 @@ export const ShoppingCartContextProvider = (props) => {
     // if there is an item in our local storage, we assign our initial shopping cart to be that.
     // else, we assign it as an empty array.
     const initialShoppingCart = cartInLocalStorage ? JSON.parse(cartInLocalStorage)
-        : []
+            : []
         ;
 
     // since we dont have local storage, initialShoppingCart is [].
