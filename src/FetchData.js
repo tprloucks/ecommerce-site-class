@@ -6,8 +6,7 @@ const allProducts = [
         brand: 'Bertram',
         price: 1000,
         image: 'https://cdn.trendhunterstatic.com/thumbs/speedboat.jpeg'
-    }
-    ,
+    },
     {
         id: '2',
         name: "blue boat",
